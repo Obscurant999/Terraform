@@ -1,0 +1,11 @@
+# NGINX Playbook
+---
+- hosts: "all"
+  become: true
+  tasks: 
+  - name: "Install NGINX"
+    ansible.builtin.apt:
+      name: "nginx"
+      state: "latest"
+      update_cache: true
+...
